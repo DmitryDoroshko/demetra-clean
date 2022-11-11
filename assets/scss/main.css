@@ -322,6 +322,56 @@ body {
   right: -200%;
 }
 
+.stats {
+  width: 100%;
+  display: flex;
+}
+.stats__left {
+  width: 50%;
+  background-color: rgb(104, 136, 255);
+  padding: 6.6rem 9.1rem 6.6rem 0;
+  display: flex;
+  justify-content: right;
+}
+.stats__item {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  font-family: "Quicksand", sans-serif;
+}
+.stats__item--left {
+  color: #fff;
+  align-items: flex-end;
+  text-align: right;
+}
+.stats__item--right {
+  color: #5E81FE;
+  text-align: left;
+  align-items: flex-start;
+}
+.stats__picture {
+  width: 6.5rem;
+}
+.stats__img {
+  width: 100%;
+}
+.stats__data {
+  font-size: 4.8rem;
+  font-weight: 400;
+}
+.stats__text {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+  max-width: 26rem;
+}
+.stats__right {
+  width: 50%;
+  color: rgb(94, 128, 255);
+  background-color: rgb(233, 239, 255);
+  padding: 6.6rem 0 6.6rem 9.1rem;
+}
+
 .subtitle {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
