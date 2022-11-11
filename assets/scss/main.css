@@ -231,6 +231,97 @@ body {
   width: 100%;
 }
 
+.about {
+  background-color: #fff;
+  padding: 17.1rem 0;
+}
+.about__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 9.2rem;
+  align-items: center;
+}
+.about__sub-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.about__main-title {
+  font-size: 2.4rem;
+  line-height: 3rem;
+}
+.about__main {
+  display: flex;
+  gap: 7rem;
+}
+.about__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  max-width: 13rem;
+  width: 100%;
+}
+.about__item:not(:last-child)::after {
+  position: absolute;
+  top: 50%;
+  right: -35%;
+  content: "";
+  width: 2.8rem;
+  height: 1px;
+  background-color: rgb(218, 228, 254);
+}
+.about__image {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #F1F5FF;
+}
+.about__heading {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+  color: rgb(64, 116, 248);
+}
+.about__text {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  line-height: 1.9rem;
+  color: rgb(173, 179, 203);
+}
+.about__actions {
+  display: flex;
+  gap: 4.8rem;
+  font-family: "Open Sans", sans-serif;
+  color: rgb(173, 179, 203);
+}
+.about__placeholder {
+  position: relative;
+  text-transform: uppercase;
+}
+.about__placeholder::before, .about__placeholder::after {
+  content: "";
+  width: 1.5rem;
+  height: 1px;
+  background-color: rgb(218, 228, 254);
+  position: absolute;
+}
+.about__placeholder::before {
+  top: 35%;
+  left: -200%;
+}
+.about__placeholder::after {
+  top: 35%;
+  right: -200%;
+}
+
 .subtitle {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
@@ -298,6 +389,14 @@ body {
 .button--white:hover {
   background-color: #cccccc;
   color: black;
+}
+.button--red {
+  background-color: rgb(255, 215, 215);
+  color: rgb(212, 63, 63);
+}
+.button--red:hover {
+  background-color: #ffa4a4;
+  color: #b72929;
 }
 
 /*# sourceMappingURL=main.css.map */

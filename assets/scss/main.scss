@@ -30,6 +30,7 @@ body {
   margin: 0 auto;
 }
 
+// header
 .header {
   padding: 2.7rem 2rem;
   border-bottom: 1px solid #D8E3FE;
@@ -303,6 +304,118 @@ body {
   }
 }
 
+// about
+.about {
+  background-color: $color-white;
+  padding: 17.1rem 0;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 9.2rem;
+    align-items: center;
+  }
+
+  &__headings {
+  }
+
+  &__sub-title {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  &__main-title {
+    font-size: 2.4rem;
+    line-height: 3rem;
+  }
+
+  &__main {
+    display: flex;
+    gap: 7rem;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    max-width: 13rem;
+    width: 100%;
+
+    &:not(:last-child)::after {
+      position: absolute;
+      top: 50%;
+      right: -35%;
+      content: "";
+      width: 2.8rem;
+      height: 1px;
+      background-color: rgba(218, 228, 254, 1);
+    }
+  }
+
+  &__image {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #F1F5FF;
+  }
+
+  &__heading {
+    font-family: $font-main;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    color: rgba(64, 116, 248, 1);
+  }
+
+  &__text {
+    text-align: center;
+    font-family: $font-main;
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: 1.9rem;
+    color: rgba(173, 179, 203, 1);
+  }
+
+  &__actions {
+    display: flex;
+    gap: 4.8rem;
+    font-family: $font-main;
+    color: rgba(173, 179, 203, 1);
+  }
+
+  &__button {
+  }
+
+  &__placeholder {
+    position: relative;
+    text-transform: uppercase;
+
+    &::before, &::after {
+      content: "";
+      width: 1.5rem;
+      height: 1px;
+      background-color: rgba(218, 228, 254, 1);
+      position: absolute;
+    }
+
+    &::before {
+      top: 35%;
+      left: -200%;
+    }
+
+    &::after {
+      top: 35%;
+      right: -200%;
+    }
+  }
+}
+
 // subtitle
 .subtitle {
   font-family: $font-tertiary;
@@ -382,6 +495,16 @@ body {
     &:hover {
       background-color: darken($color-white, 20%);
       color: black;
+    }
+  }
+
+  &--red {
+    background-color: rgba(255, 215, 215, 1);
+    color: rgba(212, 63, 63, 1);
+
+    &:hover {
+      background-color: darken(rgba(255, 215, 215, 1), 10%);
+      color: darken(rgba(212, 63, 63, 1), 10%)
     }
   }
 }
