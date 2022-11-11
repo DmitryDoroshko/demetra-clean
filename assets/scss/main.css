@@ -191,6 +191,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 7.6rem;
+  flex-wrap: wrap;
 }
 .brands__brand > svg {
   fill: #D6DAE5;
@@ -206,7 +207,7 @@ body {
 
 .plan-and-manage {
   background: rgb(245, 248, 255);
-  padding: 21rem 0;
+  padding: 21rem 2rem;
 }
 .plan-and-manage__inner {
   display: flex;
@@ -233,7 +234,7 @@ body {
 
 .about {
   background-color: #fff;
-  padding: 17.1rem 0;
+  padding: 17.1rem 2rem;
 }
 .about__inner {
   display: flex;
@@ -252,6 +253,8 @@ body {
 .about__main {
   display: flex;
   gap: 7rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .about__item {
   position: relative;
@@ -331,7 +334,15 @@ body {
   background-color: rgb(104, 136, 255);
   padding: 6.6rem 9.1rem 6.6rem 0;
   display: flex;
-  justify-content: right;
+  justify-content: flex-end;
+}
+.stats__right {
+  width: 50%;
+  color: rgb(94, 128, 255);
+  background-color: rgb(233, 239, 255);
+  padding: 6.6rem 0 6.6rem 9.1rem;
+  display: flex;
+  justify-content: flex-start;
 }
 .stats__item {
   display: flex;
@@ -341,8 +352,8 @@ body {
 }
 .stats__item--left {
   color: #fff;
-  align-items: flex-end;
   text-align: right;
+  align-items: flex-end;
 }
 .stats__item--right {
   color: #5E81FE;
@@ -364,12 +375,6 @@ body {
   font-size: 1.8rem;
   line-height: 2.3rem;
   max-width: 26rem;
-}
-.stats__right {
-  width: 50%;
-  color: rgb(94, 128, 255);
-  background-color: rgb(233, 239, 255);
-  padding: 6.6rem 0 6.6rem 9.1rem;
 }
 
 .subtitle {
@@ -447,6 +452,10 @@ body {
 .button--red:hover {
   background-color: #ffa4a4;
   color: #b72929;
+}
+
+.hidden {
+  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */
