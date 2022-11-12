@@ -30,8 +30,8 @@ body {
   margin: 0 auto;
 }
 
-// header
-.header {
+// header, footer
+.header, .footer {
   padding: 2.7rem 2rem;
   border-bottom: 1px solid #D8E3FE;
 
@@ -857,6 +857,7 @@ body {
 
 .newsletter {
   padding: 12rem 2rem;
+  border-bottom: 1px solid $color-blue-lighter;
 
   &__inner {
     display: flex;
@@ -919,6 +920,21 @@ body {
       line-height: 1.6rem;
       text-align: left;
     }
+  }
+}
+
+// footer
+.footer {
+  padding: 10rem 2rem;
+
+  &__copy {
+    margin-left: 10rem;
+    margin-top: 4.2rem;
+    font-family: $font-secondary;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    color: rgba(174, 184, 208, 1);
   }
 }
 
