@@ -9,6 +9,14 @@ $color-blue: #5E81FE;
 $color-blue-light: #697CA6;
 $color-blue-lighter: #8D96BD;
 
+// breakpoints
+$breakpoint-big-desktop: 125em; // 2000px
+$breakpoint-largest: 75em; // 1200px;
+$breakpoint-large: 62.5em; // 1000px
+$breakpoint-medium: 56.25em; // 900px
+$breakpoint-small: 37.5em; // 600px
+$breakpoint-smallest: 25em; // 400px
+
 *, *::after, *::before {
   margin: 0;
   padding: 0;
@@ -17,6 +25,15 @@ $color-blue-lighter: #8D96BD;
 
 html {
   font-size: 62.5%; // 1rem = 10px
+
+  @media only screen and (max-width: $breakpoint-large) {
+    font-size: 50%; // 8px
+  }
+
+  @media only screen and (max-width: $breakpoint-small) {
+    font-size: 37.5%; // 6px
+  }
+
 }
 
 body {
@@ -40,6 +57,13 @@ body {
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    @media only screen and (max-width: $breakpoint-small) {
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+    }
+
   }
 
   &__left {
@@ -264,9 +288,28 @@ body {
   background: rgba(245, 248, 255, 1);
   padding: 21rem 2rem;
 
+
+  @media only screen and (max-width: $breakpoint-medium) {
+    padding: 10rem 2rem;
+  }
+
+  @media only screen and (max-width: $breakpoint-small) {
+    padding: 5rem 2rem;
+  }
+
   &__inner {
     display: flex;
     gap: 5.5rem;
+
+    @media only screen and (max-width: $breakpoint-large) {
+      gap: 2rem;
+    }
+
+    @media only screen and (max-width: $breakpoint-medium) {
+      flex-direction: column;
+      align-items: center;
+    }
+
   }
 
   &__left {
@@ -308,6 +351,10 @@ body {
 .about {
   background-color: $color-white;
   padding: 17.1rem 2rem;
+
+  @media only screen and (max-width: $breakpoint-small) {
+    padding: 8rem 2rem;
+  }
 
   &__inner {
     display: flex;
@@ -353,6 +400,10 @@ body {
       width: 2.8rem;
       height: 1px;
       background-color: rgba(218, 228, 254, 1);
+
+      @media only screen and (max-width: $breakpoint-small) {
+        display: none;
+      }
     }
   }
 
@@ -389,6 +440,7 @@ body {
     gap: 4.8rem;
     font-family: $font-main;
     color: rgba(173, 179, 203, 1);
+    align-items: center;
   }
 
   &__button {
@@ -429,6 +481,11 @@ body {
     padding: 6.6rem 9.1rem 6.6rem 0;
     display: flex;
     justify-content: flex-end;
+
+    @media only screen and (max-width: $breakpoint-small) {
+      padding: 6.6rem 3rem 6.6rem 0;
+    }
+
   }
 
   &__right {
@@ -438,6 +495,10 @@ body {
     padding: 6.6rem 0 6.6rem 9.1rem;
     display: flex;
     justify-content: flex-start;
+
+    @media only screen and (max-width: $breakpoint-small) {
+      padding: 6.6rem 0 6.6rem 3rem;
+    }
   }
 
   &__item {
@@ -485,11 +546,19 @@ body {
   padding: 10.4rem 5rem;
   background-color: rgba(245, 248, 255, 1);
 
+  @media only screen and (max-width: $breakpoint-small) {
+    padding: 6rem 3rem;
+  }
+
   &__inner {
     display: flex;
     flex-direction: column;
     gap: 9.2rem;
     align-items: center;
+
+    @media only screen and (max-width: $breakpoint-small) {
+      gap: 3rem;
+    }
   }
 
   &__headings {
@@ -514,6 +583,16 @@ body {
     gap: 6.7rem;
     position: relative;
 
+    @media only screen and (max-width: $breakpoint-medium) {
+      flex-direction: column;
+      align-items: center;
+      padding: 4rem 3rem;
+    }
+
+    @media only screen and (max-width: $breakpoint-small) {
+      gap: 3rem;
+    }
+
     &::before, &::after {
       position: absolute;
       top: 50%;
@@ -522,6 +601,10 @@ body {
       font-size: 2.5rem;
       vertical-align: center;
       color: rgba(168, 180, 229, 1);
+
+      @media only screen and (max-width: $breakpoint-large) {
+        display: none;
+      }
     }
 
     &::before {
@@ -542,6 +625,14 @@ body {
     grid-template-rows: repeat(2, 12.6rem);
     width: 100%;
     max-width: 50%;
+
+    @media only screen and (max-width: $breakpoint-small) {
+      max-width: 60%;
+    }
+
+    @media only screen and (max-width: $breakpoint-smallest) {
+      max-width: 100%;
+    }
   }
 
   &__picture {
@@ -651,6 +742,13 @@ body {
   &__inner {
     display: flex;
     gap: 13.2rem;
+
+    @media only screen and (max-width: $breakpoint-medium) {
+      flex-direction: column;
+      align-items: center;
+      gap: 5rem;
+    }
+
   }
 
   &__left {
@@ -678,6 +776,12 @@ body {
 
   &__item {
     position: relative;
+
+    @media only screen and (max-width: $breakpoint-medium) {
+      display: flex;
+      justify-content: center;
+    }
+
   }
 
   &__item-text {
@@ -690,6 +794,10 @@ body {
     text-align: left;
     color: rgba(103, 111, 149, 1);
 
+    @media only screen and (max-width: $breakpoint-medium) {
+      padding: 2rem 3rem;
+    }
+
     & > span {
       display: block;
       width: 100%;
@@ -701,9 +809,17 @@ body {
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
+    @media only screen and (max-width: $breakpoint-medium) {
+      bottom: -40%;
+    }
   }
 
   &__img {
+    max-width: 100%;
+
+    @media only screen and (max-width: $breakpoint-medium) {
+      max-width: 50%;
+    }
   }
 
   &__slider {
@@ -854,7 +970,6 @@ body {
 }
 
 // newsletter
-
 .newsletter {
   padding: 12rem 2rem;
   border-bottom: 1px solid $color-blue-lighter;
@@ -863,6 +978,13 @@ body {
     display: flex;
     gap: 8rem;
     justify-content: center;
+
+    @media only screen and (max-width: $breakpoint-medium) {
+      flex-direction: column;
+      align-items: center;
+      gap: 4rem;
+    }
+
   }
 
   &__left {
@@ -935,6 +1057,11 @@ body {
     font-weight: 500;
     line-height: 1.5rem;
     color: rgba(174, 184, 208, 1);
+
+    @media only screen and (max-width: $breakpoint-small) {
+      text-align: center;
+      margin-left: 0;
+    }
   }
 }
 
