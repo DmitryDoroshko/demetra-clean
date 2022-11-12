@@ -853,6 +853,75 @@ body {
   }
 }
 
+// newsletter
+
+.newsletter {
+  padding: 12rem 2rem;
+
+  &__inner {
+    display: flex;
+    gap: 8rem;
+    justify-content: center;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+  }
+
+  &__title {
+    font-family: $font-secondary;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.3rem;
+    text-align: left;
+    color: rgba(61, 79, 159, 1);
+  }
+
+  &__text {
+    font-family: $font-tertiary;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.7rem;
+    text-align: left;
+    width: 100%;
+    max-width: 33rem;
+    color: rgba(141, 150, 189, 1);
+  }
+
+  &__right {
+
+  }
+
+  &__form {
+    display: flex;
+    gap: 1.4rem;
+  }
+
+  &__input {
+    align-self: stretch;
+    padding: 2.1rem 2.3rem;
+    outline: none;
+    border: 1px solid transparent;
+    background-color: rgba(239, 239, 247, 1);
+    border-radius: 5px;
+    font-family: $font-secondary;
+
+    &:focus {
+      border: 1px solid rgba(122, 133, 173, 1);
+    }
+
+    &::placeholder {
+      font-family: $font-secondary;
+      font-size: 1.3rem;
+      font-weight: 700;
+      line-height: 1.6rem;
+      text-align: left;
+    }
+  }
+}
+
 // subtitle
 .subtitle {
   font-family: $font-tertiary;
@@ -898,6 +967,14 @@ body {
 
 // button
 .button {
+  padding: 1.3rem 1.6rem;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 2px;
+  font-size: 1.3rem;
+  transition: all .2s;
+  border: 1px solid transparent;
+
   &:link, &:visited {
     padding: 1.3rem 1.6rem;
     text-decoration: none;
@@ -905,6 +982,7 @@ body {
     border-radius: 2px;
     font-size: 1.3rem;
     transition: all .2s;
+    display: inline-block;
   }
 
   &--light-blue {
@@ -980,6 +1058,10 @@ body {
     color: $color-white;
     background-color: transparent;
     border: 1px solid $color-white;
+  }
+
+  &--wide {
+    padding: 2.2rem 6.2rem;
   }
 }
 
